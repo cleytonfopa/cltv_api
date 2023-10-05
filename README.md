@@ -54,8 +54,8 @@ Once the environment is set up, we can run the API as follows:
 - **Description**: This endpoint will calculate the prediction for the
   CLTV for each player.
 
-- **Input**: `JSON` file containing the merge between two datasets:
-  *casino* and *players*. See the template file `test.json` in the
+- **Input**: `JSON` file containing the **merge between two datasets:
+  *casino* and *players***. See the template file `test.json` in the
   `examples/` folder.
 
 - **Response**:
