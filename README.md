@@ -5,8 +5,8 @@
 This API enables real-time generation of *Customer Lifetime Value
 (CLTV)* for a specific user. By using the user’s activity data within
 the betting platform, a machine learning
-model forecasts the expected Gross Gaming Revenue (GGR) accumulation for
-the subsequent 6 months.
+model forecasts the expected Gross Gaming Revenue (GGR) within 6 months since the 
+the first deposit.
 
 ## Table of Contents
 
@@ -55,26 +55,25 @@ Once the environment is set up, we can run the API as follows:
   CLTV for each player.
 
 - **Input**: `JSON` file containing the **merge between two datasets:
-  *casino_bi* and *players***. See the template file `test.json` in the
+  *casino_bi* and *players***. See the template file `example.json` in the
   `examples/` folder.
 
 - **Response**:
 
-  - JSON with the point estimate for CLTV, as well as the lower and
-    upper bound prediction the for each player.
+  - JSON with the point estimate for CLTV for each player.
 
   For example, for two players:
   `[{"Username":"erika12144","ltv_pred":17.4625242857},{"Username":"euphobravo","ltv_pred":30.3746}]`
 
 ## Examples <a name="examples"></a>
 
-There is a file called `test.json` in the `examples/` folder in this
+There is a file called `example.json` in the `examples/` folder in this
 repository that contains an example of the input format this API accept.
 
 Suppose you are running the API locally on default port `1234`. You can
 make a request to the API as follows:
 
-    curl -XPOST -H "Content-Type: application/json" -d @examples/test.json http://127.0.0.1:5000/predict_cltv
+    curl -XPOST -H "Content-Type: application/json" -d @examples/example.json http://127.0.0.1:1234/predict_cltv
 
 ## Author <a name="authors"></a>
 
